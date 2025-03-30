@@ -15,9 +15,6 @@ with open("key.txt", "r") as f:
     token = f.read().strip()
 
 logger = logging.getLogger(__name__)
-
-with open("lib/versioning.yml") as version_file:
-    versioning_info = yaml.safe_load(version_file)
  
 STOCKFISH_PATH = "./engines/stockfish-windows-x86-64-avx2.exe" # Adjust if needed
 
