@@ -35,7 +35,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a multi-line script
         run: |
-          echo ${{ secrets.LICHESS_KEY }} > key.txt
-          chmod +x ./engines/fairy-stockfish  
-          chmod +x ./engines/stockfish
+          echo ${{ secrets.LICHESS_KEY }} > key.txt  
+          chmod +x ./engines/stockfish-windows-x86-64-avx2.exe
           python3 lichess-bot.py
