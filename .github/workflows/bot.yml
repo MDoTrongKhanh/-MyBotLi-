@@ -9,7 +9,7 @@ on:
     branches:
       - "main"
     paths:
-      - "lichess-bot.py"
+      - "lichess_bot.py"
   schedule:
     - cron: "1 */4 * * *"
 
@@ -37,4 +37,4 @@ jobs:
         run: |
           echo ${{ secrets.LICHESS_KEY }} > key.txt  
           chmod +x ./engines/stockfish-windows-x86-64-avx2.exe
-          python3 lichess-bot.py
+          python3 lichess_bot.py
